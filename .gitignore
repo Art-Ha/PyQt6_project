@@ -1,0 +1,8 @@
+# виртуальное окружение
+.venv/
+# кэш Python
+__pycache__/
+*.pyc
+# личные файлы приложения
+users.json
+theme.json

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowTitle">
+   <string>Ежедневник</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" rowspan="7" colspan="1">
+     <widget class="QCalendarWidget" name="calendarWidget"/>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QLineEdit" name="taskLineEdit">
+      <property name="placeholderText">
+       <string>Введите текст задачи...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QComboBox" name="priorityComboBox">
+      <item>
+       <property name="text">
+        <string>Низкий</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Средний</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Высокий</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="addTaskButton">
+      <property name="text">
+       <string>Добавить задачу</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="deleteTaskButton">
+      <property name="text">
+       <string>Удалить задачу</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="markDoneButton">
+      <property name="text">
+       <string>Пометить выполненной</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="unmarkButton">
+      <property name="text">
+       <string>Снять отметку</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="statsButton">
+      <property name="text">
+       <string>Общая статистика</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" colspan="3">
+     <widget class="QLineEdit" name="searchLineEdit">
+      <property name="placeholderText">
+       <string>Поиск по задачам...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1" colspan="3">
+     <widget class="QLabel" name="tasksForDateLabel">
+      <property name="text">
+       <string>Задачи на выбранный день:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" colspan="3">
+     <widget class="QListWidget" name="tasksListWidget"/>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="deleteAllDoneButton">
+      <property name="text">
+       <string>Удалить все выполненные</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="markAllDoneButton">
+      <property name="text">
+       <string>Отметить все выполненными</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QMenu" name="menuFile">
+   <property name="title">
+    <string>Файл</string>
+   </property>
+   <addaction name="actionSave_to_Excel"/>
+   <addaction name="actionLoad_from_Excel"/>
+   <addaction name="actionExport_Stats_to_Excel"/>
+   <addaction name="actionLogout"/>
+  </widget>
+  <widget class="QMenu" name="menuHelp">
+   <property name="title">
+    <string>Справка</string>
+   </property>
+   <addaction name="actionAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave_to_Excel">
+   <property name="text">
+    <string>Сохранить в Excel</string>
+   </property>
+  </action>
+  <action name="actionLoad_from_Excel">
+   <property name="text">
+    <string>Загрузить из Excel</string>
+   </property>
+  </action>
+  <action name="actionExport_Stats_to_Excel">
+   <property name="text">
+    <string>Экспорт статистики в Excel</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="text">
+    <string>Смена пользователя</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
